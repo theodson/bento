@@ -78,12 +78,12 @@ vmware-iso|vmware-vmx)
     systemctl start vmtoolsd
   elif [ -f "/usr/bin/apt-get" ]; then
     apt-get install -y open-vm-tools;
-    mkdir /mnt/hgfs;
+    mkdir -p /mnt/hgfs;
     systemctl enable open-vm-tools
     systemctl start open-vm-tools
   elif [ -f "/usr/bin/zypper" ]; then
     zypper install -y open-vm-tools
-    mkdir /mnt/hgfs
+    mkdir -p /mnt/hgfs
     systemctl enable vmtoolsd
     systemctl start vmtoolsd
   fi

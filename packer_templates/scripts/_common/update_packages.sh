@@ -34,11 +34,13 @@ EOF
     export DEBIAN_FRONTEND=noninteractive
 
     echo "disable release-upgrades"
-    sed -i.bak 's/^Prompt=.*$/Prompt=never/' /etc/update-manager/release-upgrades
+    sed -i.bak 's/^Prompt=.*$/Prompt=never/' /etc/update-manager/release-upgrades || true
 
     echo "remove the unattended-upgrades and ubuntu-release-upgrader-core packages"
     rm -rf /var/log/unattended-upgrades;
     apt-get -y purge unattended-upgrades ubuntu-release-upgrader-core;
+
+    sed -i.bak 's/^Prompt=.*$/Prompt=never/' /etc/update-manager/release-upgrades || true
 
     echo "update the package list"
     apt-get -y update;
