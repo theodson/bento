@@ -1,0 +1,16 @@
+packer_templates/scripts/_common/update_packages.sh
+  h_6bb49d5e53f88a 37,43-44
+packer_templates/scripts/_common/guest_tools_vmware.sh
+  h_6bb49d5e53f88a 81,86
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.22",
+  "base_commit_sha": "a540b2281f3c81d66dd1d06b96bd922568159679",
+  "prompts": {},
+  "humans": {
+    "h_6bb49d5e53f88a": {
+      "author": "Theo <theodson@gmail.com>"
+    }
+  }
+}
